@@ -91,12 +91,9 @@ public class CityServiceImpl implements ICityService {
 
     @Override
     public ResultInfo queryCitys(Paging page) {
-
-        Pageable pageable = PageRequest.of(page.getPageNum(),page.getPageSize());
-        Page<City> all = cityRepository.findAll(pageable);
-        page.setTotalSize((int) all.getTotalElements());
-        page.setData(all.getContent());
-        return  ResultInfo.success(page);
+        Page<City> all = cityRepository.findAll(page);
+        Paging paging = Paging.generatePaging(all);
+        return  ResultInfo.success(paging);
     }
 
 }

@@ -1,10 +1,10 @@
 package com.example.quartzcity.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.example.base.Paging;
+import com.example.base.ResultInfo;
 import com.example.quartzcity.model.City;
 import com.example.quartzcity.service.ICityService;
-import com.example.quartzcity.base.Paging;
-import com.example.base.ResultInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
