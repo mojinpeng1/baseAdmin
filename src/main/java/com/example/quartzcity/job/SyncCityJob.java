@@ -33,7 +33,7 @@ public class SyncCityJob extends QuartzJobBean {
 
     @Resource
     private ICityService cityService;
-    public static final String GAODEI_URL = "https://restapi.amap.com/v3/config/district?keywords=%E4%B8%AD%E5%9B%BD&subdistrict=3&key=8d780537348285fdb606f22dd246c249";
+    public static final String GAODEI_URL = "https://restapi.amap.com/v3/config/district?keywords";
     @Override
     protected void executeInternal(JobExecutionContext context) throws JobExecutionException {
         log.info("同步城市开始");
