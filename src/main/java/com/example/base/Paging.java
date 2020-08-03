@@ -1,9 +1,6 @@
 package com.example.base;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -21,22 +18,14 @@ import java.util.function.Function;
  * @date 2019/12/19 18:15
  */
 
-@AllArgsConstructor
+@Data
 @NoArgsConstructor
 public class Paging implements Pageable, Serializable {
-    @Getter
-    @Setter
     private Integer pageNum = 1;
-    @Setter
     private Integer pageSize = 10;
-    @Getter
-    @Setter
     private Integer totalSize = 10;
 
-    @Setter
     private Sort sort = Sort.unsorted();
-    @Getter
-    @Setter
     private List data;
 
     Paging(Integer pageNum, Integer pageSize, Sort sort) {
